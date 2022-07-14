@@ -1,0 +1,14 @@
+<hello name="{{ name }}"></hello>
+<div class="main-container">
+  <div class="item red-font" (click)="navigateGoogle()">
+    <!-- <a class="red-font" href="www.google.com" target="_blank">01</a> -->
+    01
+  </div>
+  <div class="item" (click)="toggleImage()">
+    <div *ngIf="!showImage; else showImg">02</div>
+    <ng-template #showImg>
+      <img src="https://picsum.photos/id/1/200/300" />
+    </ng-template>
+  </div>
+  <div class="item red-font" onclick="alert(03)">03</div>
+</div>
